@@ -6,10 +6,15 @@
     <title>VICIO CRM | O Fim do Marketing no Escuro</title>
     <meta name="description" content="O CRM que transforma seu investimento em marketing em faturamento real. Saiba exatamente quem já comprou de você.">
     
-    <!-- Fonts: Inter (Corpo) & Playfair Display (Destaques) -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./vicio.png">
+    <link rel="shortcut icon" type="image/png" href="./vicio.png">
+    <link rel="apple-touch-icon" href="./vicio.png">
+    
+    <!-- Fonts: Bricolage Grotesque (Corpo) & EB Garamond (Títulos) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -23,12 +28,12 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'], // Fonte de destaque reintegrada
+                        sans: ['Bricolage Grotesque', 'sans-serif'], // Fonte do corpo
+                        serif: ['EB Garamond', 'serif'], // Fonte de títulos
                     },
                     colors: {
                         brand: {
-                            red: '#FF4D4D',
+                            red: '#e7000b',
                             black: '#0F0F0F',
                             dark: '#1A1A1A',
                             gray: '#F4F4F4',
@@ -82,9 +87,13 @@
     <!-- NAV -->
     <nav class="fixed w-full z-50 top-0 bg-white/90 backdrop-blur-md border-b border-gray-100">
         <div class="max-w-[1440px] mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="font-bold text-xl tracking-tighter flex items-center gap-2">
-                <div class="w-3 h-3 bg-brand-red rounded-full"></div>
-                VICIO CRM
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8">
+                    <img src="./vicio.png" class="w-full h-full object-contain" alt="Vicio CRM" />
+                </div>
+                <h1 class="text-2xl font-serif italic">
+                    Vicio
+                </h1>
             </div>
             <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
                 <a href="#como-funciona" class="hover:text-brand-black transition-colors">Como funciona</a>
@@ -118,7 +127,7 @@
                     Para donos de restaurantes
                 </div>
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6">
-                    O CRM que transforma seu investimento em marketing em <span class="text-brand-red">faturamento real.</span>
+                    O CRM que transforma seu investimento em <span class="text-brand-red">faturamento real.</span>
                 </h1>
                 <p class="text-lg text-gray-600 leading-relaxed mb-8 max-w-lg">
                     Saiba exatamente quem já comprou de você — e use isso pra trazer gente de volta: <span class="font-semibold text-brand-black">quem está presente, quem está esfriando e quem sumiu.</span> Sem plataforma gigante. Sem trocar seu sistema atual.
